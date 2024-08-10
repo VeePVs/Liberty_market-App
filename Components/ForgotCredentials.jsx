@@ -6,7 +6,7 @@ export function ForgotCredentials() {
         <SafeAreaView style={styles.container}>
             <Text style={styles.title}>¿Olvidaste tu contraseña o usuario?</Text>
             <TextInput style={styles.input} placeholder="Ingresa tu correo electrónico"/>
-            <Button title="Continuar"/>
+            <Button color="#9381FF" title="Continuar"/>
         </SafeAreaView>
     );
 }
@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
         marginBottom: 30,
         fontSize: 30,
         color: "#2b2b2b",
+        textAlign: "center",
         fontWeight: "bold",
     },
     input:{
