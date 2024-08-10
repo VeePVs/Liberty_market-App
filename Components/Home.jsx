@@ -2,13 +2,13 @@ import {SafeAreaView, StyleSheet, View, Text, StatusBar, Button, TextInput} from
 import {PressableButtonSpecial} from "./Components/PressableButtonSpecial";
 
 
-export function Home() {
+export function Home({navigation}) {
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar backgroundColor="#444" barStyle={"light-content"}/>
             <Text style={styles.title}>Bienvenido</Text>
-            <Button title="Iniciar sesión" color={"#9381FF"}/>
-            <Button title="¿No tienes cuenta?" color={"#B8B8FF"}/>
+            <Button title="Iniciar sesión" color={"#9381FF"} onPress={()=>{navigation.navigate('Login')}}/>
+            <Button title="¿No tienes cuenta?" color={"#B8B8FF"} onPress={()=>{navigation.navigate('Register')}}/>
         </SafeAreaView>
     );
 }
