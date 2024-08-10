@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {SafeAreaView, Pressable, StyleSheet, Text, StatusBar, Button, TextInput} from "react-native";
 
-export function Login() {
+export function Login({navigation}) {
     const [user, setUser] = React.useState()
     const [password, setPassword] = React.useState()
     const [colorUser, setColorUser] = React.useState('#b8b1b1')
@@ -26,7 +26,7 @@ export function Login() {
             <TextInput style={[styles.input,{
                 borderColor: colorPassword,
             }]} value={password} onChangeText={text => setPassword(text)} placeholder="Ingresa tu contraseña" maxLength={30} secureTextEntry={true}/>
-            <Pressable
+            <Pressable onPress={()=> {navigation.navigate('Forgot Credentials')}}
                 children={({ pressed }) => (
                     <Text style={{ color: pressed ? '#222' : '#9381FF'}}>
                         ¿Olvidaste tu usuario o contraseña?

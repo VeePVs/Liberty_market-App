@@ -5,17 +5,19 @@ import DateTimePicker from "react-native-ui-datepicker/src/DateTimePicker";
 
 export function Register() {
     const [date, setDate] = React.useState(dayjs());
-
+    /*
+    <DateTimePicker
+                mode="single"
+                date={date}
+                onChange={(params) => setDate(params.date)}
+            />
+    */
     return(
         <SafeAreaView style={styles.container}>
             <Text style={styles.title}>Registro de usuario</Text>
             <TextInput placeholder="Nombres"/>
             <TextInput placeholder="Apellidos"/>
-            <DateTimePicker
-                mode="single"
-                date={date}
-                onChange={(params) => setDate(params.date)}
-            />
+
             <TextInput placeholder="Dirección"/>
             <TextInput placeholder="Fecha de nacimiento" />
             <TextInput placeholder="Nombre completo"/>
